@@ -1,1 +1,1 @@
-memberSearchIndex = [{"p":"Ki305.Romaniuk.Lab4","c":"EquationsApp","l":"EquationsApp()","u":"%3Cinit%3E()"},{"p":"Ki305.Romaniuk.Lab4","c":"EquationsApp","l":"main(String[])","u":"main(java.lang.String[])"}];updateSearchResults();
+memberSearchIndex = [{"p":"KI305RomaniukLab5","c":"EquationsApp","l":"EquationsApp()","u":"%3Cinit%3E()"},{"p":"KI305RomaniukLab5","c":"EquationsApp","l":"main(String[])","u":"main(java.lang.String[])"}];updateSearchResults();
