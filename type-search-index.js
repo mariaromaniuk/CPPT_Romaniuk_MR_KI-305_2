@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"KI305RomaniukLab5","l":"EquationsApp"}];updateSearchResults();
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"KI305RomaniukLab6","l":"Item"},{"p":"KI305RomaniukLab6","l":"Valise"},{"p":"KI305RomaniukLab6","l":"ValiseDriver"},{"p":"KI305RomaniukLab6","l":"ValuableItem"}];updateSearchResults();
