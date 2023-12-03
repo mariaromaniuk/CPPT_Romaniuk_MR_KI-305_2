@@ -1,26 +1,17 @@
-package KI305RomaniukLab2;
+package KI305RomaniukLab3;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
 
 /**
- * Клас, що представляє гвинтівку в предметній області.
+ * Абстрактний клас, що представляє гвинтівку в предметній області.
  */
-public class Gun {
-    private Long id;
+public abstract class Gun {
     private String model;
     private double caliber;
     private boolean safetyOn;
     private int ammunitionCount;
     private FileWriter logFile;
-
-    private static List<Long> listOfEvenMagGuns = new ArrayList<>();
-    private static long idCounter = 0;
-
-    private static double maxCaliber = 0;
 
     /**
      * Конструктор класу Gun.
@@ -29,17 +20,10 @@ public class Gun {
      * @param caliber   Калібр гвинтівки.
      */
     public Gun(String model, double caliber) {
-        this.id = idCounter++;
         this.model = model;
         this.caliber = caliber;
         this.safetyOn = true;
         this.ammunitionCount = 0;
-
-        if(maxCaliber < caliber) {
-            maxCaliber = caliber;
-        }
-
-        listOfEvenMagGuns.add(this.id);
 
         try {
             this.logFile = new FileWriter("gun_log.txt");
@@ -56,28 +40,8 @@ public class Gun {
      * @param ammunitionCount   Початкова кількість набоїв.
      */
     public Gun(String model, double caliber, int ammunitionCount) {
-        this.id = idCounter++;
-        this.model = model;
-        this.caliber = caliber;
-        this.safetyOn = true;
+        this(model, caliber);
         this.ammunitionCount = ammunitionCount;
-
-        if(maxCaliber < caliber) {
-            maxCaliber = caliber;
-        }
-
-        if (ammunitionCount % 2 == 0) listOfEvenMagGuns.add(this.id);
-
-        try {
-            this.logFile = new FileWriter("gun_log.txt");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
-
-    public static double getMaxCaliber() {
-        return maxCaliber;
     }
 
     /**
@@ -120,7 +84,7 @@ public class Gun {
     }
 
     // Приватний метод для ведення журналу подій.
-    private void log(String message) {
+    void log(String message) {
         try {
             logFile.write(message + "\n");
             logFile.flush();
@@ -141,7 +105,16 @@ public class Gun {
     }
 
     /**
-     * Отримати кількість набоїв.
+     * Перевіряє, чи включена безпека на гвинтівці.
+     *
+     * @return true, якщо безпека увімкнена; false, якщо безпека вимкнена.
+     */
+    public boolean isSafetyOn() {
+        return safetyOn;
+    }
+
+    /**
+     * Отримати кількість набоїв у гвинтівці.
      *
      * @return Кількість набоїв.
      */
@@ -149,11 +122,5 @@ public class Gun {
         return ammunitionCount;
     }
 
-    public String getModel() {
-        return model;
-    }
-
-    public static List<Long> getListOfEvenMagGuns() {
-        return new ArrayList<>(listOfEvenMagGuns);
-    }
+    public abstract void shoot();
 }

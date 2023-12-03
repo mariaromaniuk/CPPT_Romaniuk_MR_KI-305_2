@@ -1,0 +1,8 @@
+Safety is off.
+Safety is on.
+Cannot load ammunition with safety on.
+Cannot fire with safety on.
+Cannot fire with safety on.
+Cannot fire with safety on.
+Cannot load ammunition with safety on.
+Cannot fire with safety on.

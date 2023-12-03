@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"KI305RomaniukLab2","l":"Gun"},{"p":"KI305RomaniukLab2","l":"GunApp"}];updateSearchResults();
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"KI305RomaniukLab3","l":"AssaultRifle"},{"p":"KI305RomaniukLab3","l":"ASSaultWeapon"},{"p":"KI305RomaniukLab3","l":"Gun"},{"p":"KI305RomaniukLab3","l":"GunApp"}];updateSearchResults();
